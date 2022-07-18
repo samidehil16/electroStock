@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %} 
+{% block title %}Hello HomeController!{% endblock %} 
+
+
+{% block content %}
+   
+            <div class="top_head">
+                <div class="top_head_title"> 
+                <h3> Filtrer </h3>
+                </div>
+                <div class="top_head_form">
+                {{form(form)}}
+                </div>
+            </div>
+            <div class=" title_head"> 
+                <h2>Mes Produits</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Nom de l'article</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Prix / Unitaire</th>
+                        <th scope="col">Quantité </th>
+                        <th scope="col">Disponibilité</th>
+                        </tr>
+                    </thead>
+
+                {% for product in products %}
+                    
+                    <tbody>
+                        <tr>
+                        <th scope="row">{{product.name}}</th>
+                        <td>{{product.description}}</td>
+                        <td>{{product.price / 10}} €</td>
+                        <td>{{product.quantity}}</td>
+                        <td>
+                        {% if product.quantity == 0 %}
+                            <div class="nodispo">
+                            </div> 
+                        {% else %}
+                            <div class="dispo">
+                            </div>    
+                        {% endif %}
+                        </td>
+                        
+                        
+                        </tr>
+                    </tbody>
+                    {% endfor %} 
+                </table>
+            </div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+.title_head h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title_head {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.nodispo {
+    padding: 5%;
+    width: 10%;
+    background-color: red;
+    border-radius: 60%;
+    margin-top: 3px;
+    margin-left: 30px;
+}
+
+.dispo {
+    padding: 5%;
+    width: 10%;
+    background-color: green;
+    border-radius: 60%;
+    margin-top: 3px;
+    margin-left: 30px;
+}
+
+.top_head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+.top_head_title {
+    margin-right: 2%;
+}
+
+.top_head_form {
+    background-color: whitesmoke;
+    border-radius: 3%;
+}
+
+.top_head_form button {
+    border-radius: 5%;
+    border: solid 1px black;
+    width: 35%;
+}
